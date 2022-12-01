@@ -20,6 +20,9 @@ public class Turnmaster : MonoBehaviour
     private SnakeStarfish comp2;
     private SnakeStarfish comp3;
 
+    //save who is going into the minigame
+    private int minigamer;
+
     
     // Start is called before the first frame update
     void Start()
@@ -89,6 +92,9 @@ public class Turnmaster : MonoBehaviour
         if(done1 && done2 && done3)
         {
             Debug.Log("Starfish turns over. moving to minigame and resetting turns");
+
+            minigamer = Random.Range(1, 4);
+            Debug.Log("Starfish " + minigamer + " was chosen");
             //load minigame scene then reset starfish turns
             done1 = false;
             done2 = false;
