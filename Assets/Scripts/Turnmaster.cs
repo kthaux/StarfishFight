@@ -103,11 +103,12 @@ public class Turnmaster : MonoBehaviour
 
             minigamer = Random.Range(1, 4);
             Debug.Log("Starfish " + minigamer + " was chosen");
+            chosen = minigamer;
 
 
             //load minigame scene then reset starfish turns
 
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
 
             done1 = false;
             done2 = false;

@@ -33,6 +33,7 @@ public class GameHandler : MonoBehaviour
 
         //choose the appropriate starfish to spawn
 
+        Debug.Log("chosen starfish was: " + Turnmaster.chosen);
         Vector2 spawnpos = new Vector2(0, 0);
         GameObject Starmini = Instantiate(starmini1, spawnpos, Quaternion.identity);
     }
