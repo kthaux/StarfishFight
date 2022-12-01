@@ -14,6 +14,11 @@ public class SnakeStarfish : MonoBehaviour
     public Tilemap wallMap;
 
     public int moves;
+    public int dmg;
+    public int time;
+    public int Mlegs;
+    public int YLegs;
+    public int Clegs;
 
     public bool isTurn = false;
 
@@ -23,7 +28,11 @@ public class SnakeStarfish : MonoBehaviour
         gridPosition = new Vector2Int(0, 0);
 
         //initialize move count based on limbs
-        moves = 5;
+        moves = 5; // (Clegs + Mlegs + (2 * Ylegs))
+
+        dmg = 5; // (CLegs + Ylegs + (2 * Mlegs))
+
+        time = 10; // (5 + Mlegs + Ylegs + (2* Clegs))
     }
 
 
@@ -187,6 +196,11 @@ public class SnakeStarfish : MonoBehaviour
     public bool getTurn()
     {
         return isTurn;
+    }
+
+    public void updateLegs()
+    {
+        
     }
 
 }
