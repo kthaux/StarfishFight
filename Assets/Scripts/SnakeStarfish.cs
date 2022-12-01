@@ -13,23 +13,31 @@ public class SnakeStarfish : MonoBehaviour
 
     public Tilemap wallMap;
 
+    public int moves;
+
+    public bool isTurn = false;
+
     private void Awake()
     {
         //initial position for the starfish to start at
         gridPosition = new Vector2Int(0, 0);
+
+        //initialize move count based on limbs
+        moves = 5;
     }
 
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow) && isTurn)
         {
             
             projReturn = projMove(gridPosition, 1);
-            if(projReturn == 0)
+            if(projReturn == 0 && moves > 0)
             {
                 gridPosition.y += 1;
                 transform.position = new Vector3(gridPosition.x, gridPosition.y);
+                moves -= 1;
             }
             else
             {
@@ -37,41 +45,44 @@ public class SnakeStarfish : MonoBehaviour
             }
 
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.DownArrow) && isTurn)
         {
 
             projReturn = projMove(gridPosition, 3);
-            if(projReturn == 0)
+            if(projReturn == 0 && moves > 0)
             {
                 gridPosition.y -= 1;
                 transform.position = new Vector3(gridPosition.x, gridPosition.y);
+                moves -= 1;
             }
             else
             {
                 transform.position = new Vector3(gridPosition.x, gridPosition.y);
             }
         }
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.RightArrow) && isTurn)
         {
             projReturn = projMove(gridPosition, 2);
-            if(projReturn == 0)
+            if(projReturn == 0 && moves > 0)
             {
                 gridPosition.x += 1;
                 transform.position = new Vector3(gridPosition.x, gridPosition.y);
+                moves -= 1;
             }
             else
             {
                 transform.position = new Vector3(gridPosition.x, gridPosition.y);
             }
         }
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && isTurn)
         {
 
             projReturn = projMove(gridPosition, 4);
-            if(projReturn == 0)
+            if(projReturn == 0 && moves > 0)
             {
                 gridPosition.x -= 1;
                 transform.position = new Vector3(gridPosition.x, gridPosition.y);
+                moves -= 1;
             }
             else
             {
@@ -157,4 +168,26 @@ public class SnakeStarfish : MonoBehaviour
 
         return 0;
     }
+
+    public int getMoves()
+    {
+        return moves;
+    }
+
+    public void setMoves(int newMoves)
+    {
+        moves = newMoves;
+    }
+
+    public void setTurn(bool turn)
+    {
+        isTurn = turn;
+    }
+
+    public bool getTurn()
+    {
+        return isTurn;
+    }
+
 }
+
