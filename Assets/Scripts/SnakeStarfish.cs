@@ -13,6 +13,7 @@ public class SnakeStarfish : MonoBehaviour
     public int type = 0;
 
     public Tilemap wallMap;
+    public Tilemap wkptMap;
 
     public int moves;
     public int dmg;
@@ -55,12 +56,21 @@ public class SnakeStarfish : MonoBehaviour
         {
             
             projReturn = projMove(gridPosition, 1);
+            //are we hitting a wall? if not, move
             if(projReturn == 0 && moves > 0)
             {
                 gridPosition.y += 1;
                 transform.position = new Vector3(gridPosition.x, gridPosition.y);
                 moves -= 1;
             }
+            //are we hitting a weakpoint
+            else if(projReturn == 2 && moves > 0)
+            {
+                //apply dmg here
+                Debug.Log("Weakpoint hit. applying dmg");
+                moves = 0;
+            }
+            //we hit a wall. dont move, dont decrement moves
             else
             {
                 transform.position = new Vector3(gridPosition.x, gridPosition.y);
@@ -77,6 +87,12 @@ public class SnakeStarfish : MonoBehaviour
                 transform.position = new Vector3(gridPosition.x, gridPosition.y);
                 moves -= 1;
             }
+            else if(projReturn == 2 && moves > 0)
+            {
+                //apply dmg here
+                Debug.Log("Weakpoint hit. applying dmg");
+                moves = 0;
+            }
             else
             {
                 transform.position = new Vector3(gridPosition.x, gridPosition.y);
@@ -90,6 +106,12 @@ public class SnakeStarfish : MonoBehaviour
                 gridPosition.x += 1;
                 transform.position = new Vector3(gridPosition.x, gridPosition.y);
                 moves -= 1;
+            }
+            else if(projReturn == 2 && moves > 0)
+            {
+                //apply dmg here
+                Debug.Log("Weakpoint hit. applying dmg");
+                moves = 0;
             }
             else
             {
@@ -105,6 +127,12 @@ public class SnakeStarfish : MonoBehaviour
                 gridPosition.x -= 1;
                 transform.position = new Vector3(gridPosition.x, gridPosition.y);
                 moves -= 1;
+            }
+            else if(projReturn == 2 && moves > 0)
+            {
+                //apply dmg here
+                Debug.Log("Weakpoint hit. applying dmg");
+                moves = 0;
             }
             else
             {
@@ -133,6 +161,10 @@ public class SnakeStarfish : MonoBehaviour
                 //Debug.Log("Tile found above");
                 return 1;
             }
+            else if(wkptMap.HasTile(targetPos))
+            {
+                return 2;
+            }
             else
             {
                 //Debug.Log("tile above is empty");
@@ -148,6 +180,10 @@ public class SnakeStarfish : MonoBehaviour
             {
                 //Debug.Log("Tile found to the right");
                 return 1;
+            }
+            else if(wkptMap.HasTile(targetPos))
+            {
+                return 2;
             }
             else
             {
@@ -165,6 +201,10 @@ public class SnakeStarfish : MonoBehaviour
                 //Debug.Log("Tile found below");
                 return 1;
             }
+            else if(wkptMap.HasTile(targetPos))
+            {
+                return 2;
+            }
             else
             {
                 //Debug.Log("tile below is empty");
@@ -180,6 +220,10 @@ public class SnakeStarfish : MonoBehaviour
             {
                 //Debug.Log("Tile found to the left");
                 return 1;
+            }
+            else if(wkptMap.HasTile(targetPos))
+            {
+                return 2;
             }
             else
             {
