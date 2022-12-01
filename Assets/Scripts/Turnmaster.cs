@@ -8,6 +8,10 @@ public class Turnmaster : MonoBehaviour
     public GameObject starfish2;
     public GameObject starfish3;
 
+    public GameObject legY;
+    public GameObject legC;
+    public GameObject legM;
+
     public int turns1;
     public int turns2;
     public int turns3;
