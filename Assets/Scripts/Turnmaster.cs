@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Turnmaster : MonoBehaviour
 {
@@ -26,6 +27,9 @@ public class Turnmaster : MonoBehaviour
 
     //save who is going into the minigame
     private int minigamer;
+
+    //static value to pass between scenes
+    public static int chosen;
 
     
     // Start is called before the first frame update
@@ -99,7 +103,12 @@ public class Turnmaster : MonoBehaviour
 
             minigamer = Random.Range(1, 4);
             Debug.Log("Starfish " + minigamer + " was chosen");
+
+
             //load minigame scene then reset starfish turns
+
+            SceneManager.LoadScene(1);
+
             done1 = false;
             done2 = false;
             done3 = false;

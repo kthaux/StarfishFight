@@ -1163,13 +1163,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &564236694 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2116565111960495076, guid: 9bebe41e3ffefe54b97c1474f5dfae00, type: 3}
-  m_PrefabInstance: {fileID: 2116565112520340082}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &725032561
 GameObject:
   m_ObjectHideFlags: 0
@@ -1199,9 +1194,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d965ebb918229ca439bd10192f1e8ae0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  starfish1: {fileID: 1533276692}
-  starfish2: {fileID: 1791497131}
-  starfish3: {fileID: 564236694}
+  starfish1: {fileID: 0}
+  starfish2: {fileID: 0}
+  starfish3: {fileID: 0}
   legY: {fileID: 0}
   legC: {fileID: 0}
   legM: {fileID: 0}
@@ -1224,7 +1219,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1211439106
 GameObject:
@@ -1270,18 +1265,8 @@ Transform:
   - {fileID: 50463657}
   - {fileID: 2020486714}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1533276692 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 162899436640119965, guid: ffc07f2ec51f7dd46bedf621815f93d0, type: 3}
-  m_PrefabInstance: {fileID: 162899437803822729}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1791497131 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6606488214513762903, guid: a2bdfa0e024d44a4e8fa8b0a15fc9836, type: 3}
-  m_PrefabInstance: {fileID: 6606488214065500668}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2020486713
 GameObject:
   m_ObjectHideFlags: 0
@@ -1902,6 +1887,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9179993340763744512, guid: ffc07f2ec51f7dd46bedf621815f93d0, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffc07f2ec51f7dd46bedf621815f93d0, type: 3}
 --- !u!1001 &2116565112520340082
@@ -1911,6 +1900,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 664114478173159653, guid: 9bebe41e3ffefe54b97c1474f5dfae00, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880633754887534515, guid: 9bebe41e3ffefe54b97c1474f5dfae00, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2116565111960495076, guid: 9bebe41e3ffefe54b97c1474f5dfae00, type: 3}
       propertyPath: m_Name
       value: Starfish3
@@ -1963,6 +1960,34 @@ PrefabInstance:
       propertyPath: wallMap
       value: 
       objectReference: {fileID: 2020486717}
+    - target: {fileID: 2867923478978734768, guid: 9bebe41e3ffefe54b97c1474f5dfae00, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622873139030563604, guid: 9bebe41e3ffefe54b97c1474f5dfae00, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5082999996655623794, guid: 9bebe41e3ffefe54b97c1474f5dfae00, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5082999996655623794, guid: 9bebe41e3ffefe54b97c1474f5dfae00, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5082999996655623794, guid: 9bebe41e3ffefe54b97c1474f5dfae00, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6501622551470035542, guid: 9bebe41e3ffefe54b97c1474f5dfae00, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7426339931647669361, guid: 9bebe41e3ffefe54b97c1474f5dfae00, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bebe41e3ffefe54b97c1474f5dfae00, type: 3}
 --- !u!1001 &6606488214065500668
