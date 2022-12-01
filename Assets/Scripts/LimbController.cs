@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LimbController : MonoBehaviour
 {
-   //Keep track of total picked coins (Since the value is static, it can be accessed at "SC_2DCoin.totalLimbs" from any script)
+   //Keep track of total picked up limbs
     public static int totalLimbs = 0; 
 
     void Awake()
@@ -15,14 +15,14 @@ public class LimbController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D c2d)
     {
-        //Destroy the coin if Object tagged Player comes in contact with it
+        //Destroy the limb if Object tagged Player comes in contact with it (collect the limb)
         if (c2d.CompareTag("Player"))
         {
-            //Add coin to counter
+            //Add limb to counter
             totalLimbs++;
-            //Test: Print total number of coins
+            //Test: Print total number of limbs
             Debug.Log("You currently have " + LimbController.totalLimbs + " limbs.");
-            //Destroy coin
+            //Destroy limb
             Destroy(gameObject);
         }
     }

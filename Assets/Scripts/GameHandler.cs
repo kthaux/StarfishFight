@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class GameHandler : MonoBehaviour
 {
+    //Creates the base limb prefab
     public GameObject limb;
-    // public Vector3 origin = Vector3.zero;
-    // Start is called before the first frame update
+
     void Start()
     {
         // Fuckin Jank way to spawn in 5 limbs at random locations
