@@ -10,6 +10,7 @@ public class SnakeStarfish : MonoBehaviour
     private Vector3Int targetPos;
     //int to keep return value of projMove
     private int projReturn;
+    public int type = 0;
 
     public Tilemap wallMap;
 
@@ -25,7 +26,19 @@ public class SnakeStarfish : MonoBehaviour
     private void Awake()
     {
         //initial position for the starfish to start at
-        gridPosition = new Vector2Int(0, 0);
+        if(type == 1)
+        {
+            gridPosition = new Vector2Int(-1, 0);
+        }
+        else if(type == 2)
+        {
+            gridPosition = new Vector2Int(0, 0);
+        }
+        else
+        {
+            gridPosition = new Vector2Int(1, 0);
+        }
+
 
         //initialize move count based on limbs
         moves = 5; // (Clegs + Mlegs + (2 * Ylegs))
