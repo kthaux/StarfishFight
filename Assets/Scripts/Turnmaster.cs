@@ -17,7 +17,7 @@ public class Turnmaster : MonoBehaviour
     public int turns2;
     public int turns3;
 
-    public bool done1;
+    public static bool done1; // changed to static to access for weakpoint map
     public bool done2;
     public bool done3;
 
