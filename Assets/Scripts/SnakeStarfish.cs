@@ -104,64 +104,64 @@ public class SnakeStarfish : MonoBehaviour
         //up
         if(direction == 1)
         {
-            Debug.Log("UP");
+            //Debug.Log("UP");
             targetPos.y += 1;
             if(wallMap.HasTile(targetPos))
             {
-                Debug.Log("Tile found above");
+                //Debug.Log("Tile found above");
                 return 1;
             }
             else
             {
-                Debug.Log("tile above is empty");
+                //Debug.Log("tile above is empty");
                 return 0;
             }
         }
         //right
         if(direction == 2)
         {
-            Debug.Log("RIGHT");
+            //Debug.Log("RIGHT");
             targetPos.x += 1;
             if(wallMap.HasTile(targetPos))
             {
-                Debug.Log("Tile found to the right");
+                //Debug.Log("Tile found to the right");
                 return 1;
             }
             else
             {
-                Debug.Log("tile right is empty");
+                //Debug.Log("tile right is empty");
                 return 0;
             }
         }
         //down
         if(direction == 3)
         {
-            Debug.Log("DOWN");
+            //Debug.Log("DOWN");
             targetPos.y -= 1;
             if(wallMap.HasTile(targetPos))
             {
-                Debug.Log("Tile found below");
+                //Debug.Log("Tile found below");
                 return 1;
             }
             else
             {
-                Debug.Log("tile below is empty");
+                //Debug.Log("tile below is empty");
                 return 0;
             }
         }
         //left
         if(direction == 4)
         {
-            Debug.Log("LEFT");
+            //Debug.Log("LEFT");
             targetPos.x -= 1;
             if(wallMap.HasTile(targetPos))
             {
-                Debug.Log("Tile found to the left");
+                //Debug.Log("Tile found to the left");
                 return 1;
             }
             else
             {
-                Debug.Log("tile left is empty");
+                //Debug.Log("tile left is empty");
                 return 0;
             }
         }

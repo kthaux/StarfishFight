@@ -51,6 +51,13 @@ public class Turnmaster : MonoBehaviour
         turns2 = comp2.getMoves();
         turns3 = comp3.getMoves();
 
+        if(!done1 && !done2 && !done3)
+        {
+            //start of new round, beggining with starfish1
+
+            comp1.setTurn(true);
+        }
+
         //if any starfish have no moves left end their turn and update our flag and start the next ones turn
         if(turns1 < 1)
         {
@@ -78,6 +85,7 @@ public class Turnmaster : MonoBehaviour
 
 
         //if all turns have been taken, move to monster turn/minigame
+        //also need to check if monster is alive still
         if(done1 && done2 && done3)
         {
             Debug.Log("Starfish turns over. moving to minigame and resetting turns");
@@ -91,9 +99,7 @@ public class Turnmaster : MonoBehaviour
             comp2.setMoves(5);
             comp3.setMoves(5);
 
-            //start of new round, beggining with starfish1
-
-            comp1.setTurn(true);
+            
         }
 
 
