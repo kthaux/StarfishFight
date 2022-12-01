@@ -608,6 +608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20f38143aab5c6e46a5e259072261c09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 1
   wallMap: {fileID: 0}
   moves: 0
   dmg: 0
