@@ -11,6 +11,11 @@ public class GameHandler : MonoBehaviour
     public GameObject botLeftLimb;
     public GameObject botRightLimb;
 
+    //game objects to hold the starfish base
+    public GameObject starmini1;
+    public GameObject starmini2;
+    public GameObject starmini3;
+
     void Start()
     {
         // Fuckin Jank way to spawn in 5 limbs at random locations
@@ -25,6 +30,11 @@ public class GameHandler : MonoBehaviour
         Vector2 position5 = new Vector2(Random.Range(-9, 9), Random.Range(-9, 9));
         GameObject Limb5 = Instantiate(botRightLimb, position5, Quaternion.identity);
 
+
+        //choose the appropriate starfish to spawn
+
+        Vector2 spawnpos = new Vector2(0, 0);
+        GameObject Starmini = Instantiate(starmini1, spawnpos, Quaternion.identity);
     }
 
     // Update is called once per frame
