@@ -1887,6 +1887,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3269749944002884677, guid: ffc07f2ec51f7dd46bedf621815f93d0, type: 3}
+      propertyPath: wallMap
+      value: 
+      objectReference: {fileID: 2020486717}
+    - target: {fileID: 3269749944002884677, guid: ffc07f2ec51f7dd46bedf621815f93d0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9179993340763744512, guid: ffc07f2ec51f7dd46bedf621815f93d0, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1968,6 +1976,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4857273264408793964, guid: 9bebe41e3ffefe54b97c1474f5dfae00, type: 3}
+      propertyPath: wallMap
+      value: 
+      objectReference: {fileID: 2020486717}
     - target: {fileID: 5082999996655623794, guid: 9bebe41e3ffefe54b97c1474f5dfae00, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -2049,5 +2061,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Starfish2
       objectReference: {fileID: 0}
+    - target: {fileID: 6817733708701764053, guid: a2bdfa0e024d44a4e8fa8b0a15fc9836, type: 3}
+      propertyPath: wallMap
+      value: 
+      objectReference: {fileID: 2020486717}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2bdfa0e024d44a4e8fa8b0a15fc9836, type: 3}
