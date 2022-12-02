@@ -39,7 +39,7 @@ public class Timer : MonoBehaviour
     {
         timeDisplay += 1;
         float sec = Mathf.FloorToInt(timeDisplay % 60);
-        timeText.text = string.Format("Gather limbs! {0:00} second remaining.", sec);
+        timeText.text = string.Format("Gather limbs! {0:00}", sec) + " seconds remaining.";
 
     }
 }
