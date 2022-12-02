@@ -261,6 +261,12 @@ MonoBehaviour:
   starmini1: {fileID: 4645406811871816317, guid: 6e3a2c38ce53b824bbccc196021c683a, type: 3}
   starmini2: {fileID: 5729396680733174133, guid: d63e93daaa9b33e41916b467dc80de85, type: 3}
   starmini3: {fileID: 4562916398581648205, guid: 81d0f67425a41ad4788dbd8c1e3bf5dd, type: 3}
+  eyeObst: {fileID: 873943296450869773, guid: 5a7b427542d6d164f91d32ad52ab2a26, type: 3}
+  boneObst: {fileID: 3271871314192517318, guid: fa177ca5feaf25b44a64a222a8233504, type: 3}
+  skullObst: {fileID: 3548648100492683933, guid: 85f788922d06fc04b8bb684fce3b9dc5, type: 3}
+  eyeStaticObst: {fileID: 8783343609422781654, guid: fc27d84e565a12447a568da2afc966ad, type: 3}
+  boneStaticObst: {fileID: 2225943884454772618, guid: 95261549262de394a8899762a26c606f, type: 3}
+  skullStaticObst: {fileID: 1902169206888268203, guid: f24dd5d89e5ac554a932f28b4e1fcff4, type: 3}
 --- !u!1 &530426828
 GameObject:
   m_ObjectHideFlags: 0
