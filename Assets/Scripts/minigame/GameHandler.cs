@@ -91,19 +91,19 @@ public class GameHandler : MonoBehaviour
 
         // Makes projectiles fly in at beginning
         if(Vector3.Distance(eyeObst1.transform.position, eyeStaticObst1.transform.position) > 0.8f){
-            eyeObst1.transform.position = Vector2.Lerp(eyeObst1.transform.position, eyeStaticObstPos, .02f);
+            eyeObst1.transform.position = Vector2.Lerp(eyeObst1.transform.position, eyeStaticObstPos, .04f);
         } else {
             eyeStaticObst1.GetComponent<SpriteRenderer>().enabled = true;
             eyeObst1.GetComponent<SpriteRenderer>().enabled = false;
         }
         if(Vector3.Distance(boneObst1.transform.position, boneStaticObst1.transform.position) > 0.8f){
-            boneObst1.transform.position = Vector2.Lerp(boneObst1.transform.position, boneStaticObstPos, .02f);
+            boneObst1.transform.position = Vector2.Lerp(boneObst1.transform.position, boneStaticObstPos, .04f);
         } else {
             boneStaticObst1.GetComponent<SpriteRenderer>().enabled = true;
             boneObst1.GetComponent<SpriteRenderer>().enabled = false;
         }
         if(Vector3.Distance(skullObst1.transform.position, skullStaticObst1.transform.position) > 0.8f){
-            skullObst1.transform.position = Vector2.Lerp(skullObst1.transform.position, skullStaticObstPos, .02f);
+            skullObst1.transform.position = Vector2.Lerp(skullObst1.transform.position, skullStaticObstPos, .04f);
         } else {
             skullStaticObst1.GetComponent<SpriteRenderer>().enabled = true;
             skullObst1.GetComponent<SpriteRenderer>().enabled = false;
@@ -115,7 +115,7 @@ public class GameHandler : MonoBehaviour
             SceneManager.UnloadSceneAsync(2);
         }
         timer -= Time.deltaTime;
-        Debug.Log("Timer: " + timer);
+        // Debug.Log("Timer: " + timer);
 
     }
 }
