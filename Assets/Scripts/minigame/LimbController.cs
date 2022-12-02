@@ -6,6 +6,8 @@ public class LimbController : MonoBehaviour
 {
    //Keep track of total picked up limbs
     public static int totalLimbs = 0; 
+    public bool collected = false;
+    public Vector2 speed = new Vector2(10, 10);
 
     void Awake()
     {
@@ -23,7 +25,23 @@ public class LimbController : MonoBehaviour
             //Test: Print total number of limbs
             Debug.Log("You currently have " + LimbController.totalLimbs + " limbs.");
             //Destroy limb
-            Destroy(gameObject);
+            // Destroy(gameObject);
+            this.collected = true;
         }
+    }
+
+    void Update()
+    {
+        // Sets the limb to move at the same rate as the body, effectivly "combining" them
+       if (collected) {
+            float inputX = Input.GetAxis("Horizontal");
+            float inputY = Input.GetAxis("Vertical");
+
+            Vector3 movement = new Vector3(speed.x * inputX, speed.y * inputY, 0);
+
+            movement *= Time.deltaTime;
+
+            transform.Translate(movement);
+       } 
     }
 }

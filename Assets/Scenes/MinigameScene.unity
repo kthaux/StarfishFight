@@ -267,6 +267,7 @@ MonoBehaviour:
   eyeStaticObst: {fileID: 8783343609422781654, guid: fc27d84e565a12447a568da2afc966ad, type: 3}
   boneStaticObst: {fileID: 2225943884454772618, guid: 95261549262de394a8899762a26c606f, type: 3}
   skullStaticObst: {fileID: 1902169206888268203, guid: f24dd5d89e5ac554a932f28b4e1fcff4, type: 3}
+  timer: 5
 --- !u!1 &530426828
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,7 +402,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1680901615
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 7170c111568057b47bbdf59b6ed8e2a1, type: 3}
   m_Color: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 1}
   m_FlipX: 0
