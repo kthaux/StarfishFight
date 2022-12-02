@@ -16,6 +16,7 @@ public class GameHandler : MonoBehaviour
     public GameObject starmini1;
     public GameObject starmini2;
     public GameObject starmini3;
+    GameObject Starmini;
 
     //game objects for enemy sprites
     public GameObject eyeObst;
@@ -30,6 +31,11 @@ public class GameHandler : MonoBehaviour
     GameObject eyeStaticObst1;
     GameObject boneStaticObst1;
     GameObject skullStaticObst1;
+    GameObject Limb1;
+    GameObject Limb2;
+    GameObject Limb3;
+    GameObject Limb4;
+    GameObject Limb5;
     Vector2 eyeStaticObstPos;
     Vector2 boneStaticObstPos;
     Vector2 skullStaticObstPos;
@@ -47,15 +53,15 @@ public class GameHandler : MonoBehaviour
         minidone = false;
         // Fuckin Jank way to spawn in 5 limbs at random locations
         Vector2 position1 = new Vector2(Random.Range(-9, 9), Random.Range(-9, 9));
-        GameObject Limb1 = Instantiate(leftLimb, position1, Quaternion.identity);
+        Limb1 = Instantiate(leftLimb, position1, Quaternion.identity);
         Vector2 position2 = new Vector2(Random.Range(-9, 9), Random.Range(-9, 9));
-        GameObject Limb2 = Instantiate(topLimb, position2, Quaternion.identity);
+        Limb2 = Instantiate(topLimb, position2, Quaternion.identity);
         Vector2 position3 = new Vector2(Random.Range(-9, 9), Random.Range(-9, 9));
-        GameObject Limb3 = Instantiate(rightLimb, position3, Quaternion.identity);
+        Limb3 = Instantiate(rightLimb, position3, Quaternion.identity);
         Vector2 position4 = new Vector2(Random.Range(-9, 9), Random.Range(-9, 9));
-        GameObject Limb4 = Instantiate(botLeftLimb, position4, Quaternion.identity);
+        Limb4 = Instantiate(botLeftLimb, position4, Quaternion.identity);
         Vector2 position5 = new Vector2(Random.Range(-9, 9), Random.Range(-9, 9));
-        GameObject Limb5 = Instantiate(botRightLimb, position5, Quaternion.identity);
+        Limb5 = Instantiate(botRightLimb, position5, Quaternion.identity);
 
         // Spawn static enemy sprites in
         eyeStaticObstPos = new Vector2(Random.Range(-9, 9), Random.Range(-9, 9));
@@ -82,7 +88,7 @@ public class GameHandler : MonoBehaviour
 
         Debug.Log("chosen starfish was: " + Turnmaster.chosen);
         Vector2 spawnpos = new Vector2(0, 0);
-        GameObject Starmini = Instantiate(starmini1, spawnpos, Quaternion.identity);
+        Starmini = Instantiate(starmini1, spawnpos, Quaternion.identity);
     }
 
     // Update is called once per frame
@@ -112,6 +118,15 @@ public class GameHandler : MonoBehaviour
         {
 
             minidone = true;
+            Destroy(eyeStaticObst1);
+            Destroy(boneStaticObst1);
+            Destroy(skullStaticObst1);
+            Destroy(Starmini);
+            Destroy(Limb1);
+            Destroy(Limb2);
+            Destroy(Limb3);
+            Destroy(Limb4);
+            Destroy(Limb5);
             SceneManager.UnloadSceneAsync(2);
         }
         timer -= Time.deltaTime;
