@@ -9,6 +9,8 @@ public class Turnmaster : MonoBehaviour
     public GameObject starfish2;
     public GameObject starfish3;
 
+    public GameObject parent;
+
     public GameObject legY;
     public GameObject legC;
     public GameObject legM;
@@ -58,6 +60,13 @@ public class Turnmaster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //return from minigame
+        if(GameHandler.minidone == true)
+        {
+            parent.SetActive(true);
+        }
+        
+        
         turns1 = comp1.getMoves();
         turns2 = comp2.getMoves();
         turns3 = comp3.getMoves();
@@ -105,15 +114,15 @@ public class Turnmaster : MonoBehaviour
             Debug.Log("Starfish " + minigamer + " was chosen");
             chosen = minigamer;
 
-
             //load minigame scene then reset starfish turns
-
-            SceneManager.LoadScene(2);
-
             done1 = false;
             done2 = false;
             done3 = false;
 
+            SceneManager.LoadScene(2, LoadSceneMode.Additive);
+
+            parent.SetActive(false);
+            
             //need logic for calculating limb # to set next turn's moves
             comp1.setMoves(5);
             comp2.setMoves(5);
@@ -121,7 +130,6 @@ public class Turnmaster : MonoBehaviour
 
             
         }
-
 
     }
 

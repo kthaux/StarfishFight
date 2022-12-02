@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameHandler : MonoBehaviour
 {
@@ -35,9 +36,15 @@ public class GameHandler : MonoBehaviour
     Vector2 eyeObstPos;
     Vector2 boneObstPos;
     Vector2 skullObstPos;
+    private GameObject go;
+
+    public static bool minidone = true;
+
+    public float timer = 5;
 
     void Start()
     {
+        minidone = false;
         // Fuckin Jank way to spawn in 5 limbs at random locations
         Vector2 position1 = new Vector2(Random.Range(-9, 9), Random.Range(-9, 9));
         GameObject Limb1 = Instantiate(leftLimb, position1, Quaternion.identity);
@@ -68,6 +75,8 @@ public class GameHandler : MonoBehaviour
         boneObst1 = Instantiate(boneObst, boneObstPos, Quaternion.identity);
         skullObstPos = new Vector2(25, Random.Range(-9, 9));
         skullObst1 = Instantiate(skullObst, skullObstPos, Quaternion.identity);
+        //initiate timer based off of legs
+        timer = 10;
 
         //choose the appropriate starfish to spawn
 
@@ -99,5 +108,14 @@ public class GameHandler : MonoBehaviour
             skullStaticObst1.GetComponent<SpriteRenderer>().enabled = true;
             skullObst1.GetComponent<SpriteRenderer>().enabled = false;
         }
+        if(timer <= 0)
+        {
+
+            minidone = true;
+            SceneManager.UnloadSceneAsync(2);
+        }
+        timer -= Time.deltaTime;
+        Debug.Log("Timer: " + timer);
+
     }
 }
